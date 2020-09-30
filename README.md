@@ -10,7 +10,9 @@ For example, given nums = `[0, 1, 0, 3, 12]`, after calling your method, nums sh
 
 ```ruby
 def move_zeroes(nums)
-
+zeros = nums.count{|n| n==0}
+nums.delete(0)
+zero.times {nums.push(0)}
 end
 ```
 
@@ -30,6 +32,15 @@ You may assume that each input would have exactly one solution.
 
 ```ruby
 def two_sum(numbers, target)
-
+    output =  {}
+    numbers.each_with_index do |num, i| 
+        numbers.each_with_index do |num2, i2|
+        if num + num2 == target && i != i2
+        output[:index1] = i
+        output[:index2] = i2
+        end 
+    end
+    end
+    output
 end
 ```
